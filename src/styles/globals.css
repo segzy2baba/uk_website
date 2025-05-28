@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-tech-blue: #0a2540;
+  --secondary-accent-cyan: #00d4ff;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-white text-primary-tech-blue rounded-full font-semibold 
+    transition-all duration-300 hover:bg-primary-tech-blue hover:text-white 
+    transform hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-white text-white rounded-full font-semibold 
+    transition-all duration-300 hover:bg-white hover:text-primary-tech-blue 
+    transform hover:-translate-y-1;
+  }
+}
+
+body {
+  @apply bg-gradient-to-b from-primary-tech-blue to-black min-h-screen text-white;
+}
